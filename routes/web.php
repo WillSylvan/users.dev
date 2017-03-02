@@ -11,10 +11,27 @@
 |
 */
 
+
 Route::get('/', function () {
-    return view('welcome');
+    return "Hello World";
 });
 
-Auth::routes();
 
-Route::get('/home', 'HomeController@index');
+Route::get("registration/{id}", function ($id) {
+    $data ["user"] = \App\User::find($id);
+    return view("person", $data);
+});
+
+
+
+
+
+Route::get("person", function () {
+
+
+});
+
+
+
+
+
