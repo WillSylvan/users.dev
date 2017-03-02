@@ -20,16 +20,18 @@ Route::get('/', function () {
 Route::get("registration/{id}", function ($id) {
     $data ["user"] = \App\User::find($id);
     return view("person", $data);
+
 });
-
-
-
 
 
 Route::get("person", function () {
-
+    $data ["allUsers"] = \App\User::all();
+    return view("listwithpersons", $data);
 
 });
+
+
+// Routr::get("users", "UsersControllers@php");
 
 
 
