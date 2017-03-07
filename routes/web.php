@@ -31,9 +31,6 @@ Route::get("person", function () {
 });
 
 
-// Routr::get("users", "UsersControllers@php");
+Route::get("playstore/{id}", "PlaystoreController@index");
 
-
-
-
-
+Route::get("playground", "PlaygroundController@index");
