@@ -17,20 +17,5 @@ Route::get('/', function () {
 });
 
 
-Route::get("registration/{id}", function ($id) {
-    $data ["user"] = \App\User::find($id);
-    return view("person", $data);
-
-});
-
-
-Route::get("person", function () {
-    $data ["allUsers"] = \App\User::all();
-    return view("listwithpersons", $data);
-
-});
-
-
-Route::get("playstore/{id}", "PlaystoreController@index");
-
-Route::get("playground", "PlaygroundController@index");
+Route::get("users", "UsersController@index");
+Route::get("users/{id}", "UsersController@show");
