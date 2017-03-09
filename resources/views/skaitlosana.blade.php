@@ -35,4 +35,8 @@
 
 {{$namesstrtoupper}}
 
+<h1> Apgriestā veidā </h1>
+
+{{json_encode($reversenumb)}}
+
 
