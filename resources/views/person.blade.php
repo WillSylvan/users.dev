@@ -11,11 +11,11 @@
 
 <body>
 
-  <div class="namestyle">{{ $user->name }}</div> - [ {{ $user->email }} ]
+  <div class="namestyle">{{ $user->name }}</div> - [ {{ $user->email }} ] -
 
   <div class="botton">
 
-   <a href="{{ url("/person") }}" ><p>Back</p></a>
+   <a href="{{ url("/users") }}" ><p>Back</p></a>
 
   </div> 
 

@@ -19,3 +19,18 @@ Route::get('/', function () {
 
 Route::get("users", "UsersController@index");
 Route::get("users/{id}", "UsersController@show");
+
+
+Route::get('test/{a}', function($a) {
+
+    $a=array(10,20,52,105,56,89,96,100005);
+    $c=0;
+    foreach($a as $b)
+    {
+        if($b>$c) {
+            $c=$b;
+        }
+    }
+    echo $c;
+});
+
