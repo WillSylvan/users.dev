@@ -24,13 +24,15 @@ Route::get("users/{id}", "UsersController@show");
 Route::get('test/{a}', function($a) {
 
     $a=array(10,20,52,105,56,89,96,100005);
-    $c=0;
+    $c=100000000;
     foreach($a as $b)
     {
-        if($b>$c) {
+        if($b<$c) {
             $c=$b;
         }
     }
     echo $c;
 });
+
+
 
