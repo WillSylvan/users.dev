@@ -29,9 +29,52 @@
 
 
 }
+.margin-left {
+  margin-left: 25px;
+}
 
-.SkaitlosanaController {
-    background-color: yellow;
+.allnumberstuff {
+  font-weight: bold;    
+  font-size: 18px;
+  font-family: 'Rubik Mono One', sans-serif;
 
+}
+
+.allnumberstuff h1 {
+  font-family: 'Rubik Mono One', sans-serif;
+  color: #b30000;
+  font-weight: bold;    
+  font-size: 30px;
+
+}
+
+.allnamestuff {
+  color: #666666;
+  font-weight: bold;    
+  font-size: 18px;
+  font-family: 'Rubik Mono One', sans-serif;
+}
+
+.allnamestuff h1 {
+  font-family: 'Rubik Mono One', sans-serif;
+  color: #2d00b3;
+  font-weight: bold;    
+  font-size: 30px;
+
+}
+
+.alllettersstuff{
+  color: #666666;
+  font-weight: bold;    
+  font-size: 18px;
+  font-family: 'Rubik Mono One', sans-serif;
+
+}
+
+.alllettersstuff h1 {
+  font-family: 'Rubik Mono One', sans-serif;
+  color: #cca300;
+  font-weight: bold;    
+  font-size: 30px;
 
 }

@@ -17,7 +17,11 @@ class SkaitlosanaController {
         $data["minnumb"] = min($numbers);
         $data["hownumbers"] = count($numbers);
         $data["reversenumb"] = array_reverse($numbers);
+        $letters = array('e', 'z', 'h', 'a', 't', 'b', 'g', 'c', 'i');
+        $data["letters"] = $letters;
+        $data["asortletters"] = asort($letters);
         return view("skaitlosana", $data);
+
 
     }
 }

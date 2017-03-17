@@ -34,26 +34,7 @@ Route::get('test', function() {
     echo $c;
 });
 
-
-
-// Route::get('temp', function() {
-
-
-// if (isset($_POST['celsius'])) {
-//     $c = $_POST['celsius'];
-//     $f = ($c * 9/5) + 32;
-
-//     echo "<pre>$c Celsius is " .$f ." Fahrenheit</pre>";
-// }
-
-// if (isset($_POST['fahren'])) {
-//     $fah = $_POST['fahren'];
-//     $cen = ($fah - 32) / 1.8;
-
-//     echo "<pre>$fah Fahrenheit is " .$cen ." Celsius</pre>";
-// }
- 
-// });
-
-
 Route::get("skaitlosana", "SkaitlosanaController@index");
+Route::get("darbs", "DarbsController@index");
+Route::get("tasks", "TasksController@index");
+Route::get("randomnum", "RandomNumController@index");
