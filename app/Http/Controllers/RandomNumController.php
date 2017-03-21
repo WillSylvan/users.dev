@@ -6,23 +6,36 @@ class RandomNumController {
     public function index()
     {
         $i=1;
+        $randNum = [];
         while($i<=10) {
             $randNum[] = rand(1,13);
             $i++;
         }
 
-        foreach ($randNum as &$new){
-            $new = $new > 7;
+        dump($randNum);
 
-            dd($new);
+        $smallerTo7 = [];
+        foreach ($randNum as $new){
+            if($new < 7) {
+                $smallerTo7[] = $new;
+            }
         }
-    }
+
+        dump($smallerTo7);
+
+        $newList = [];
+        foreach ($smallerTo7 as $newpow){
+            $newList[] = $newpow * $newpow;
+        }
+        
+
+        for ($x = 0; $x <= 9; $x++) {
+        
+        }
+            dump($x);
+
 }
+    }
 
 
 
-
-
-
-    // $filtRandNum = $randNum < 7;
-    //      echo $filtRandNum;
