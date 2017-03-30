@@ -17,6 +17,7 @@ class KlasesdarbsController
         $min = $limit / 2;
         $max = $limit * $limit;
 
+        $data['x'] = $limit;
 //                                Radom skaitļi masīvā                             >>>>>
 
         while($i<=10) {
@@ -26,7 +27,7 @@ class KlasesdarbsController
         
         $data['randlist'] = $myarray;
 
-                            //   Salīdzina  X ar Y                                >>>>
+                            //   Salīdzina  X ar Y                                 >>>>>
         $equivalent = [];
 
         foreach ($myarray as $value){
@@ -36,8 +37,8 @@ class KlasesdarbsController
         }
         
         $data['equivalent'] = $equivalent;
-       
- //                             Izvada cik elementi ir Masīvā                     >>>>
+
+ //                             Izvada cik elementi ir Masīvā                      >>>>>
         $data['allnumberinlist'] = count($equivalent);
 
         return view("klasesdarbs", $data);
