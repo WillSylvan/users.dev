@@ -24,15 +24,17 @@ class RandomNumController {
         dump($smallerTo7);
 
         $newList = [];
-        foreach ($smallerTo7 as $newpow){
+        foreach ($randNum as $newpow){
             $newList[] = $newpow * $newpow;
         }
-        
 
-        for ($x = 0; $x <= 9; $x++) {
-        
-        }
-            dump($x);
+        dump($newList);
+
+        $plusAllNumb = [];
+       foreach ($newList as $i => $fp) {
+           echo($i % 1 === 0 ? ' third' : '');
+           // dump($fp);
+       }
 
 }
     }
