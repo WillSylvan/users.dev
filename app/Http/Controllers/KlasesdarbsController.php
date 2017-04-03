@@ -18,8 +18,8 @@ class KlasesdarbsController
         $max = $limit * $limit;
 
         $data['x'] = $limit;
-//                                Radom skaitļi masīvā                             >>>>>
 
+//                                Radom skaitļi masīvā                             >>>>>
         while($i<=10) {
             $myarray[] = rand($min, $max);
             $i++;

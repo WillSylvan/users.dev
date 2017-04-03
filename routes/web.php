@@ -39,4 +39,4 @@ Route::get("darbs", "DarbsController@index");
 Route::get("tasks", "TasksController@index");
 Route::get("randomnum", "RandomNumController@index");
 Route::get("klasesdarbs", "KlasesdarbsController@index");
-// Route::put('klasesdarbs/{id}', "KlasesdarbsController@index");
+Route::get("personlist", "PersonlistController@index");
