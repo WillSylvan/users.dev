@@ -20,29 +20,27 @@ class PersonlistController
 
         // dump($randomName, $account, $age);
 
+        $data = [];
+
 //               Vārdu lists -------------------------------------->>>>
 
         $listofname=array("Janis"=>"red","Peteris"=>"green","Ilmars"=>"blue","Maris"=>"yellow", "Haralds"=>"white");
-        print_r(array_rand($listofname));
+        $data['name'] = (array_rand($listofname));
 
 //               Random gadu skaits -------------------------------->>>>
 
         $age = rand(0, 100);
-        dump($age);
-
+        $data['age'] = $age;
 //               Random bilance ----------------------------------->>>>>
 
-        $moneyBilance[] = rand(-100, 100);
-        dump($moneyBilance);
+        $moneyBilance = rand(-100, 100);
+        $data['bi'] = $moneyBilance;
 
 //               Cik personas izvadīs norādot get parametru ----------->>>>>
 
-        $limit = request()->get("x");
-        
+        $howmuchget = request()->get("x");
 
-
-
-        
+        return view("personlist", $data);        
         
     }
 }
