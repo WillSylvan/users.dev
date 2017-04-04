@@ -36,6 +36,16 @@ class PersonlistController
         $moneyBilance = rand(-100, 100);
         $data['bi'] = $moneyBilance;
 
+        // foreach ($moneyBilance as $thatone){
+        //    if ($thatone > 0) {
+        //         "#006400";
+        //    } else if ($thatone < 0){
+        //         "#FF0000";
+        //    } else ($thatone == 0){
+        //         "#000000";
+        //    }      
+        // }
+
 //               Cik personas izvadīs norādot get parametru ----------->>>>>
 
         $howmuchget = request()->get("x");

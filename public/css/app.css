@@ -78,3 +78,35 @@
   font-size: 30px;
 
 }
+
+.boxaround {
+  background: 	#FFF8DC;
+  width: 400px;
+  height: 100px;
+  display: inline block;
+}
+
+.nameAndAge {
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 50%;
+  height: 100px;
+  font-size: 20px;
+  
+}
+
+.bilance {
+  text-align: center;
+  margin-top: 35px;
+  margin-left: 50px;
+  width: 50px;
+  height: 50px;
+
+}
+
+.bilance p {
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+
+}
