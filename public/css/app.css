@@ -79,34 +79,57 @@
 
 }
 
-.boxaround {
-  background: 	#DCDCDC;
-  width: 400px;
-  height: 100px;
-  display: inline block;
+.containerforpage{
+  width: 500px;
+
+  margin-bottom: 10px;
+  background: #eaeae1;
+
 }
 
-.nameAndAge {
-  margin-top: 10px;
-  margin-left: 10px;
-  width: 50%;
-  height: 100px;
-  font-size: 20px;
+ul {
+   list-style: none;
+
+}
+
+.name{
+  font-size: 25px;
+
+}
+
+.age{
+ font-size: 20px;
+
+}
+
+.bilance{
+ font-size: 40px;
+ float: right;
+ margin-top: 1px;
+ margin-right: 10px;
+ color: red;
+ 
+
+}
+
+.twoInOne{
+  width: 200px;
   
+
 }
 
-.bilance {
-  text-align: center;
-  /*margin-top: 35px;*/
-  /*margin-left: 50px;*/
-  width: 100px;
-  height: 80px;
-  font-size: 40px;
+.positive{
+
+  color: green;
 }
 
-.bilance p {
-  width: 40px;
-  height: 40px;
-  
+.negative {
+
+  color: red;
+}
+
+.kid{
+  font-size: 15px;
+  float: right;
 
 }

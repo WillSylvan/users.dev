@@ -8,31 +8,34 @@
 
     <body>
 
-        <div class="containerforpage">
+        
+            <ul>
+                @foreach ($allpersons as $one)
+                <div class="containerforpage">
 
-            <div class="boxaround">
+                    <!--<div class="bilance"><li>{{$one["bilance"]}}</li></div>-->
+                        <div class="bilance {{ $one['bilance'] > 0 ? "positive" : "negative" }}"> {{ $one['bilance'] }}</div>
 
-                <div class="nameAndAge">
+                    <div class="twoInOne">
+                        <div class="name"><b><li>{{$one["name"]}}</li></b></div>
+                        
+                        <div class="age"><li>{{$one["age"]}}  
+                            <div class="kid">
+                                @if($one["age"] < 18)
+                                    Nav Pilngadīgs
+                                @endif
+                            </div>
+                        </li></div>
 
-                    <div class="name">
-                        <b>{{$name}}</b>
                     </div>
 
-                    <div class="age">
-                        {{$age}} 
-                    </div>
-
+                    
                 </div>
-
-
-                <div class="bilance">
-                    <p>{{$bi}}€</p>
-                </div>
-
-            </div>    
-
-        </div>
+                @endforeach
+            </ul>
+        
 
     </body>
 
 </html>
+
