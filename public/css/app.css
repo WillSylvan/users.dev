@@ -114,22 +114,21 @@ ul {
 
 .twoInOne{
   width: 200px;
+  padding-left: 10px;
   
 
 }
 
 .positive{
-
   color: green;
 }
 
 .negative {
-
   color: red;
 }
 
 .kid{
   font-size: 15px;
   float: right;
-
+  margin-top:5px;
 }

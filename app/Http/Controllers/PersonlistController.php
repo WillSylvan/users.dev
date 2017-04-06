@@ -21,7 +21,8 @@ class PersonlistController
                 $allPersons[] = [
                         "name" => $listofname[array_rand($listofname)],
                         "age" => rand(0, 100),
-                        "bilance" => rand(-100.00, 100.00),
+                        "bilance" => number_format(rand(-10000, 10000) / 100, 2),
+                        
                 ];
                 
         } 
