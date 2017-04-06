@@ -17,6 +17,13 @@
 </head>
 
 <body>
+    <form action="/userlist">
+        <input type="text" name="email" value="email">
+        <input type="text" name="name" value="name">
+        <input type="submit" value="Submit">
+        
+    </form> 
+
 
     <ul>
         @foreach ($allUserOfDBlist as $one)

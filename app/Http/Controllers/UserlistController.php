@@ -12,10 +12,16 @@ class UserlistController
     public function index()
     {
     
+        $email = request()->email;
+        $name = request()->name;
 
-        $q = DB::table("users");
 
-        $data['allUserOfDBlist'] = $q->get();
+        $users = DB::table("users")
+            ->where("email", $email)
+            ->orWhere("name", $name)
+            ->get();
+
+        $data['allUserOfDBlist'] = $users;
 
         return view("userlist", $data);
         
