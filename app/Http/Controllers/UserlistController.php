@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use DB;
+
 use Illuminate\Http\Request;
 
 class UserlistController
@@ -9,7 +11,13 @@ class UserlistController
 
     public function index()
     {
-    echo 10;
+    
+
+        $q = DB::table("users");
+
+        $data['allUserOfDBlist'] = $q->get();
+
+        return view("userlist", $data);
         
     }
 }
