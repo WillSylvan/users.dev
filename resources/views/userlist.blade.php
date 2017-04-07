@@ -46,18 +46,17 @@
         @endforeach
     </ul>
 
-        <form action="/userlistss">
-            <select name="email_list">
+    <form action="/userlist">
+        <select name="email_list">
+            @foreach ($emaillist as $two)
+                <option value=>{{ $two -> email }}</option>
+            @endforeach
+        </select>
 
-                @foreach ($allUserOfDBlist as $one)
-                    <option value=>{{ $one -> email }}</option>
+        <br><br>
 
-                @endforeach
-               
-            </select>
-            <br><br>
-            <input type="submit">
-        </form>
+        <input type="submit">
+    </form>
 
 
 

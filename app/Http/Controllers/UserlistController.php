@@ -19,12 +19,18 @@ class UserlistController
             ->orWhere("name", $name)
             ->get();
 
+        
+        $thatemail = request()->email;
+
+        $useremail = DB::table("users")
+            ->select("email")
+            ->get();
+
+        $data['emaillist'] = $useremail;
 
         $data['allUserOfDBlist'] = $users;
 
         return view("userlist", $data);
-
-
 
     }
 }
