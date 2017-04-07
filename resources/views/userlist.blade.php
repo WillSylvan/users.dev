@@ -17,11 +17,13 @@
 </head>
 
 <body>
+    
+    
+    
     <form action="/userlist">
         <input type="text" name="email" value="email">
         <input type="text" name="name" value="name">
         <input type="submit" value="Submit">
-        
     </form> 
 
 
@@ -43,6 +45,24 @@
             </li>
         @endforeach
     </ul>
+
+        <form action="/userlistss">
+            <select name="email_list">
+
+                @foreach ($allUserOfDBlist as $one)
+                    <option value=>{{ $one -> email }}</option>
+
+                @endforeach
+               
+            </select>
+            <br><br>
+            <input type="submit">
+        </form>
+
+
+
+
+
 
 </body>
 </html>
