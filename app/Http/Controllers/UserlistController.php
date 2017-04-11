@@ -10,7 +10,6 @@ class UserlistController
 {
     public function index()
     {
-    
         $email = request()->email;
         $name = request()->name;
 
@@ -18,14 +17,13 @@ class UserlistController
             ->where("email", $email)
             ->orWhere("name", $name)
             ->get();
-
         
-        $thatemail = request()->email;
+        // $thatemail = request()->email;
 
         $useremail = DB::table("users")
             ->select("email")
             ->get();
-
+        
         $data['emaillist'] = $useremail;
 
         $data['allUserOfDBlist'] = $users;
