@@ -18,20 +18,18 @@
 
 <body>
     
-    
-    
     <form action="/userlist">
         <select name="email">
+
             @foreach ($emaillist as $two)
-                <option value="{{ $two->email }}">{{ $two->email }}</option>
+                <option value="{{ $two->email }}" @if ( $two->email === $email) selected @endif >{{ $two->email }}</option>
             @endforeach
+
         </select>
 
         <input type="text" name="name" value="name">
         <input type="submit" value="Submit">
-        <input type="submit" value="Submit">
     </form> 
-
 
     <ul>
         @foreach ($allUserOfDBlist as $one)
@@ -47,18 +45,9 @@
                     
                 <dt> Pass - </dt> 
                     <dd> {{ $one -> password }} </dd>
-                    
             </li>
         @endforeach
     </ul>
-
-
-        
-
-
-
-
-
 
 </body>
 </html>

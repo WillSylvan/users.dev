@@ -17,13 +17,15 @@ class UserlistController
             ->where("email", $email)
             ->orWhere("name", $name)
             ->get();
-        
-        // $thatemail = request()->email;
+
+// ---------------DropDown  List  Stuff ------------->>>>>
 
         $useremail = DB::table("users")
             ->select("email")
             ->get();
-        
+
+        $data["email"] = $email;
+
         $data['emaillist'] = $useremail;
 
         $data['allUserOfDBlist'] = $users;
