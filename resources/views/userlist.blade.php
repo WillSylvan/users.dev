@@ -1,4 +1,3 @@
-
 <!doctype html>
 
 <html lang="en">
@@ -20,11 +19,9 @@
     
     <form action="/userlist">
         <select name="email">
-
             @foreach ($emaillist as $two)
                 <option value="{{ $two->email }}" @if ( $two->email === $email) selected @endif >{{ $two->email }}</option>
             @endforeach
-
         </select>
 
         <input type="text" name="name" value="name">
@@ -36,7 +33,7 @@
             <li>
                 <dt> ID - </dt> 
                     <dd> {{ $one->id }} </dd>
-                    
+
                 <dt> Name - </dt>
                     <dd> {{ $one -> name }} </dd>
                     
