@@ -24,9 +24,21 @@ class UserlistController
             ->select("email")
             ->get();
 
+        $new = [];
+
+        for ($i = 0; $i < count($useremail); $i++) {
+            $first = $useremail[$i]->email;
+            $new[] = "@" . explode("@", $first)[1];
+        }
+
+        $data["email_domain"] = $new;
+
+        $data["email"] = $email;
+
         $data["email"] = $email;
 
         $data['emaillist'] = $useremail;
+
 
         $data['allUserOfDBlist'] = $users;
 

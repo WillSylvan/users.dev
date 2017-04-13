@@ -19,8 +19,9 @@
     
     <form action="/userlist">
         <select name="email">
-            @foreach ($emaillist as $two)
-                <option value="{{ $two->email }}" @if ( $two->email === $email) selected @endif >{{ $two->email }}</option>
+            @foreach ($email_domain as $two)
+            <option value="{{ $two }}" @if ( $two === $email) selected @endif >{{ $two }}</option>
+               
             @endforeach
         </select>
 
@@ -45,6 +46,7 @@
             </li>
         @endforeach
     </ul>
+
 
 </body>
 </html>
