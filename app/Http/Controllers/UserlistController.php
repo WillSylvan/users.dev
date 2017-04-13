@@ -24,7 +24,10 @@ class UserlistController
             ->select("email")
             ->get();
 
+
         $data["email"] = $email;
+
+        $data["name"] = $name;
 
         $data['emaillist'] = $useremail;
 
