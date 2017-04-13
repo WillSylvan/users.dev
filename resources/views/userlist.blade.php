@@ -20,7 +20,7 @@
     <form action="/userlist">
         <select name="email">
             @foreach ($emaillist as $two)
-                <option value="{{ $two->"%".$gmail."%" }}" @if ( $two->email === $email) selected @endif >{{ $two->"%".$gmail."%" }}</option>
+                <option value="{{ $two->email }}" @if ( $two->email === $email) selected @endif >{{ $two->email }}</option>
             @endforeach
         </select>
 
