@@ -19,7 +19,7 @@
     
     <form action="/userlist">
         <select name="email">
-            @foreach ($email_domain as $two)
+            @foreach ($emailDomain as $two)
             <option value="{{ $two }}" @if ( $two === $email) selected @endif >{{ $two }}</option>
                
             @endforeach

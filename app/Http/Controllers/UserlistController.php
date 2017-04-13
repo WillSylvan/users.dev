@@ -28,10 +28,18 @@ class UserlistController
 
         for ($i = 0; $i < count($useremail); $i++) {
             $first = $useremail[$i]->email;
-            $new[] = "@" . explode("@", $first)[1];
+            $emailDomain = "@" . explode("@", $first)[1];
+
+            if ( ! in_array($emailDomain, $new)){
+                $new[] = $emailDomain;
+            }
         }
 
-        $data["email_domain"] = $new;
+        
+
+
+
+        $data["emailDomain"] = $new;
 
         $data["email"] = $email;
 
@@ -39,10 +47,11 @@ class UserlistController
 
         $data['emaillist'] = $useremail;
 
-
         $data['allUserOfDBlist'] = $users;
 
         return view("userlist", $data);
 
     }
 }
+
+// 1. uztaisit tukšu sarakstu 2. iet ciklā cauri tiem domeiem un no pimrā parkopēt ciklā uz otro. 3. ciklā iekšā if lai
